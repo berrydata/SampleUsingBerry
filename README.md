@@ -1,17 +1,17 @@
 ## Sample project UsingBerry <a name="sample"> </a>
 
-<b>The Berry oracle</b> is a decentralized oracle. It provides an option for contracts to securely interact with and obtain data from off-chain.
+<b>The Berry oracle</b> is a decentralized oracle on Binance Smart Chain. It provides an option for contracts to securely interact with and obtain data from off-chain.
 
 Quick references are included below: 
 
 <b>Implement Berry into your project</b>
-This repo already includes the [usingBerry](https://github.com/berry-io/usingberry) package.
+This repo already includes the [usingBerry](https://github.com/berrydata/UsingBerry) package.
 
 ## How to use 
 #### 1. Clone project and install dependencies
 
 ```bash
-git clone git@github.com:berry-data/sampleUsingBerry.git
+git clone git@github.com:berrydata/SampleUsingBerry.git
 npm install 
 ```
 
@@ -25,7 +25,7 @@ contract BtcPriceContract is UsingBerry {
   //This Contract now have access to all functions on UsingBerry
 
   uint256 btcPrice;
-  uint256 btcRequetId = 2;
+  uint256 btcRequetId = 1;
 
   constructor(address payable _berryAddress) UsingBerry(_berryAddress) public {}
 
@@ -109,5 +109,5 @@ npm run test
 Just run truffle migrate with desired Network
 
 ```bash
-truffle migrate --network XXX
+truffle migrate
 ```
