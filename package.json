@@ -1,0 +1,30 @@
+{
+  "name": "sampleusingberry",
+  "version": "1.0.0",
+  "description": "Sample Using Berry Repo",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "usingberry": "^1.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "ganache-cli": "^6.10.1",
+    "truffle": "^5.1.39"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berry-data/sampleUsingBerry.git"
+  },
+  "author": "Berry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berry-data/sampleUsingBerry/issues"
+  },
+  "homepage": "https://github.com/berry-data/sampleUsingBerry#readme"
+}
