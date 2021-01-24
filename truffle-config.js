@@ -1,31 +1,30 @@
 require("dotenv").config();
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-
-const mnemonic = process.env.ETH_MNEMONIC;
-//console.log("mnemonic1", mnemonic1)
-const accessToken = process.env.WEB3_INFURA_PROJECT_ID;
+const privateKey = process.env.PRIVATE_KEY;
 
 module.exports = {
-  // networks: {
-  //   development: {
-  //     host: "localhost",
-  //     port: 8545,
-  //     network_id: "*",
-  //     gas: 6721975, // default ganache-cli value
-  //   },
-  //   rinkeby: {
-  //     provider: () =>
-  //       new HDWalletProvider(process.env.PRIVATE_KEY, `https://rinkeby.infura.io/v3/${accessToken}`),
-  //     network_id: 4,
-  //   },
-  //   mainnet: {
-  //     provider: () =>
-  //       new HDWalletProvider(mnemonic, `https://mainnet.infura.io/v3/${accessToken}`),
-  //     network_id: 1,
-  //     gas: 4700000,
-  //     gasPrice: 4000000000,
-  //   },
-  //}
+  networks: {
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*",
+      gas: 6721975, // default ganache-cli value
+    },
+    testnet: {
+      provider: () => new HDWalletProvider(privateKey, 'https://data-seed-prebsc-1-s1.binance.org:8545'),
+      network_id: 97,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+    bsc: {
+      provider: () => new HDWalletProvider(privateKey, 'https://bsc-dataseed1.binance.org'),
+      network_id: 56,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+  },
   compilers: {
     solc: {
       version: "0.7.0",

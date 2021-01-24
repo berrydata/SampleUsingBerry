@@ -3,18 +3,11 @@ const SampleUsingBerry = artifacts.require("SampleUsingBerry");
 // const BerryPlayground = artifacts.require("BerryPlayground");
 
 const mainnetAddress = "";
-const testAddress = "";
+const testAddress = "0x7DdC408C0Cd13D3543156AE2bc5772C56E91AA0f";
 
 module.exports = function (deployer, network) {
-  if (network == "mainnet") {
+  if (network == "bsc") {
     deployer.deploy(SampleUsingBerry, mainnetAddress);
-  } else if (
-    network == "rinkeby" ||
-    network == "goerli" ||
-    network == "kovan" ||
-    network == "ropsten"
-  ) {
-    deployer.deploy(SampleUsingBerry, testAddress);
   } else {
     deployer.deploy(SampleUsingBerry, testAddress);
   }
