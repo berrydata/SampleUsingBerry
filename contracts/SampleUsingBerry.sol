@@ -1,6 +1,5 @@
 pragma solidity >=0.5.16;
 import "usingberry/contracts/UsingBerry.sol";
-import "usingberry/contracts/BerryPlayground.sol";
 
 contract SampleUsingBerry is UsingBerry {
     constructor(address payable _berryAddress)
