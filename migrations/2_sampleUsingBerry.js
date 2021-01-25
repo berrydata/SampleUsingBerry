@@ -1,6 +1,5 @@
 const Migrations = artifacts.require("Migrations");
 const SampleUsingBerry = artifacts.require("SampleUsingBerry");
-// const BerryPlayground = artifacts.require("BerryPlayground");
 
 const mainnetAddress = "";
 const testAddress = "0x7DdC408C0Cd13D3543156AE2bc5772C56E91AA0f";
