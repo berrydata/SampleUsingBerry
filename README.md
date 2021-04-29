@@ -111,3 +111,16 @@ Just run truffle migrate with desired Network
 ```bash
 truffle migrate
 ```
+
+## Pre-Set Request IDs
+
+1 for BTC/USD
+
+2 for ETH/USD
+
+3 for LTC/USD
+
+4 for XRP/USD
+
+5 for BNB/USD
+
